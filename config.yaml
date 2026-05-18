@@ -1,0 +1,45 @@
+# ═══════════════════════════════════════════════════════════════
+#   GRID TRADING HYPERLIQUID BOT — Configuration
+#   Built by Tom Hozier · RektCoder
+#   https://app.hyperliquid.xyz/join/REKTCODER
+# ═══════════════════════════════════════════════════════════════
+
+# ─── ASSET & EXCHANGE ─────────────────────────────────────────
+# Trading pair (perpetual). Examples: BTC, ETH, SOL, HYPE
+asset: "BTC"
+
+# Network: "mainnet" (real money) or "testnet" (paper trading)
+network: "mainnet"
+
+# ─── GRID GEOMETRY ────────────────────────────────────────────
+# auto: range = current_price ± range_pct
+# manual: use range_lower / range_upper below
+range_mode: "auto"
+range_pct: 0.5              # auto mode: ±3% from current price
+range_lower: 95000.0          # manual mode only
+range_upper: 105000.0         # manual mode only
+
+# Number of grid levels (more = tighter, smaller profit per fill)
+grid_levels: 7
+
+# ─── CAPITAL & RISK ───────────────────────────────────────────
+capital_usdc: 15         # Total USDC allocated
+leverage: 5                   # 1–40x on Hyperliquid
+max_drawdown_pct: 15.0        # Pause if equity drops this %
+range_break_pct: 1.5          # Pause if price exits range by this %
+
+# ─── ORDER BEHAVIOR ───────────────────────────────────────────
+post_only: true               # ALO (post-only) for maker rebates
+time_in_force: "Gtc"          # Gtc = good till cancelled
+
+# ─── MONITORING ───────────────────────────────────────────────
+refresh_interval_seconds: 5   # How often to reconcile state
+verbose_logging: true         # Render live dashboard
+persist_trades: true          # Append every fill to disk
+trades_log_file: "trades.jsonl"
+
+# ─── TELEGRAM (optional — fill in .env to enable) ─────────────
+telegram_enabled: false
+telegram_alert_on_fill: true
+telegram_alert_on_range_break: true
+telegram_alert_on_drawdown: true
