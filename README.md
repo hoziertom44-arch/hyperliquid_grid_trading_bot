@@ -12,7 +12,7 @@
 
 <br/>
 
-[![Watch the full tutorial](https://img.youtube.com/vi/N4W06Rybn_0/maxresdefault.jpg)](https://youtu.be/N4W06Rybn_0)
+[![Watch the full tutorial](https://img.youtube.com/vi/N4W06Rybn_0/hqdefault.jpg)](https://youtu.be/N4W06Rybn_0)
 
 ### ▶️ [**Watch the full setup tutorial on YouTube**](https://youtu.be/N4W06Rybn_0)
 
